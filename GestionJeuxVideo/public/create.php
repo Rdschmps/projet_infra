@@ -1,19 +1,29 @@
 <?php
 require_once __DIR__ . '/../config/db.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nom = $_POST['nom'];
-    $maison_edition = $_POST['maison_edition'];
-    $note = $_POST['note'];
-    $image = $_POST['image'];
-    $date_evaluation = $_POST['date_evaluation'];
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // Récupération des données du formulaire et nettoyage
+    $nom = htmlspecialchars($_POST['nom'] ?? '');
+    $maison_edition = htmlspecialchars($_POST['maison_edition'] ?? '');
+    $note = $_POST['note'] ?? '';
+    $image = htmlspecialchars($_POST['image'] ?? '');
+    $date_evaluation = htmlspecialchars($_POST['date_evaluation'] ?? '');
 
-    $sql = "INSERT INTO jeu_video (nom, maison_edition, note, image, date_evaluation) VALUES (?, ?, ?, ?, ?)";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([$nom, $maison_edition, $note, $image, $date_evaluation]);
+    // Validation des entrées utilisateur
+    if (empty($nom) || empty($maison_edition) || empty($note) || empty($image) || empty($date_evaluation)) {
+        $error_message = "Veuillez remplir tous les champs du formulaire.";
+    } elseif (!is_numeric($note) || $note < 1 || $note > 10) {
+        $error_message = "La note doit être un nombre entre 1 et 10.";
+    } else {
+        // Insertion des données dans la base de données
+        $sql = "INSERT INTO jeu_video (nom, maison_edition, note, image, date_evaluation) VALUES (?, ?, ?, ?, ?)";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([$nom, $maison_edition, $note, $image, $date_evaluation]);
 
-    header("Location: index.php");
-    exit();
+        // Redirection vers la page d'accueil
+        header("Location: index.php");
+        exit();
+    }
 }
 
 include '../includes/header.html';
