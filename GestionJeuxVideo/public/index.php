@@ -16,37 +16,28 @@ include '../includes/header.html';
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <h2>Liste des jeux vidéos</h2>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Nom</th>
-                <th>Maison d'édition</th>
-                <th>Note</th>
-                <th>Image</th>
-                <th>Date d'évaluation</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($jeux_videos as $jeu): ?>
-                <tr>
-                    <td><?php echo htmlspecialchars($jeu['nom']); ?></td>
-                    <td><?php echo htmlspecialchars($jeu['maison_edition']); ?></td>
-                    <td><?php echo htmlspecialchars($jeu['note']); ?></td>
-                    <td><img src="<?php echo htmlspecialchars($jeu['image']); ?>" alt="Image" width="100"></td>
-                    <td><?php echo htmlspecialchars($jeu['date_evaluation']); ?></td>
-                    <td>
-                        <a href="update.php?id=<?php echo $jeu['id']; ?>" class="btn btn-success">Modifier</a>
-                        <a href="delete.php?id=<?php echo $jeu['id']; ?>" class="btn btn-secondary">Supprimer</a>
-                    </td>
-                </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-
     <div class="container">
-        <a href="create.php" class="btn btn-success">Ajouter un nouveau jeu</a>
+        <h2 class="page-title">Liste des jeux vidéos</h2>
+        <div class="games-grid">
+            <?php foreach ($jeux_videos as $jeu): ?>
+                <div class="game-card">
+                    <img src="<?php echo htmlspecialchars($jeu['image']); ?>" alt="Image de <?php echo htmlspecialchars($jeu['nom']); ?>" class="game-image">
+                    <div class="game-info">
+                        <h3 class="game-title"><?php echo htmlspecialchars($jeu['nom']); ?></h3>
+                        <p class="game-edition"><strong>Maison d'édition:</strong> <?php echo htmlspecialchars($jeu['maison_edition']); ?></p>
+                        <p class="game-note"><strong>Note:</strong> <?php echo htmlspecialchars($jeu['note']); ?>/10</p>
+                        <p class="game-date"><strong>Date d'évaluation:</strong> <?php echo htmlspecialchars($jeu['date_evaluation']); ?></p>
+                        <div class="game-actions">
+                            <a href="update.php?id=<?php echo $jeu['id']; ?>" class="btn btn-success">Modifier</a>
+                            <a href="delete.php?id=<?php echo $jeu['id']; ?>" class="btn btn-secondary">Supprimer</a>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+        <div class="add-game">
+            <a href="create.php" class="btn btn-success">Ajouter un nouveau jeu</a>
+        </div>
     </div>
 </body>
 </html>
