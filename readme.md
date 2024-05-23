@@ -22,4 +22,4 @@ Ce projet fait partie du cours d'Infrastructure à l'école YNOV. Il s'agit d'un
 
 ## Auteurs
 
-- [Deschamps Rayan & Hardy Guillaume]([lien vers votre profil GitHub](https://github.com/Rdschmps)) - Développeurs principaux
+- [Deschamps Rayan & Hardy Guillaume]([lien vers votre profil GitHub](https://github.com/Rdschmps)(https://github.com/Yupaiii)) - Développeurs principaux
