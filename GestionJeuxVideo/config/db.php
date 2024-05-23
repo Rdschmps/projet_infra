@@ -22,7 +22,7 @@ try {
     $pdo->exec("SET NAMES 'utf8'");
     
     // Test de la connexion à la base de données
-    $result = $pdo->query("SELECT 'Connexion réussie !' AS message")->fetch(PDO::FETCH_ASSOC);
+    $result = $pdo->query("SELECT '' AS message")->fetch(PDO::FETCH_ASSOC); //Ajouter "Connexion réussie !" entre les '' si vous voulez vérifier le connexion à la db avec un message
     // Affichage du message récupéré
     echo $result['message'];
 } catch (PDOException $e) {

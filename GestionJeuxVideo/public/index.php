@@ -3,8 +3,9 @@ require_once __DIR__ . '/../config/db.php';
 
 $sql = "SELECT * FROM jeu_video";
 $stmt = $pdo->query($sql);
-
 $jeux_videos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+include '../includes/header.html';
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +20,6 @@ $jeux_videos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <table border="1">
         <thead>
             <tr>
-                
                 <th>Nom</th>
                 <th>Maison d'édition</th>
                 <th>Note</th>
@@ -31,7 +31,6 @@ $jeux_videos = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <tbody>
             <?php foreach ($jeux_videos as $jeu): ?>
                 <tr>
-                    
                     <td><?php echo htmlspecialchars($jeu['nom']); ?></td>
                     <td><?php echo htmlspecialchars($jeu['maison_edition']); ?></td>
                     <td><?php echo htmlspecialchars($jeu['note']); ?></td>
@@ -45,6 +44,13 @@ $jeux_videos = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <?php endforeach; ?>
         </tbody>
     </table>
-    <a href="create.html">Ajouter un nouveau jeu</a>
+
+    <div class="container">
+        <a href="create.php" class="btn btn-success">Ajouter un nouveau jeu</a>
+    </div>
 </body>
 </html>
+
+<?php
+include '../includes/footer.html';
+?>

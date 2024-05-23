@@ -2,28 +2,35 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion des Jeux Vidéos</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
     <!-- Inclure la bibliothèque Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-Ky4Q3k6F1E4lmHNCoj3HOaOZ7W5/3i8DcTVblUI10GwGK2pVEU/k7QqmIUHc1hV9hQdRjszI9vAR+za66OhR1g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="header-container">
             <h1>Gestion des Jeux Vidéos</h1>
             <nav>
-                <ul>
-                    
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="add_game.php">Ajouter un jeu</a></li>
-                    <li><a href="#">Liste des jeux</a></li>
+                <div class="menu-icon" id="menu-icon">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul id="nav-menu" class="nav-menu">
+                    <li><a href="../public/index.php">Liste des jeux</a></li>
+                    <li><a href="../public/create.php">Ajouter un jeu</a></li>
                     <li><a href="#"><i class="far fa-user"></i> Connexion</a></li>
-                    <li><a href="#"><i class="fa-solid fa-right-to-bracket"></i>Inscription</a> </li>
-                    <!-- Ajoutez d'autres liens de navigation selon vos besoins -->
+                    <li><a href="#"><i class="fas fa-user-plus"></i> Inscription</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
+    <script>
+        document.getElementById('menu-icon').onclick = function() {
+            var navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
