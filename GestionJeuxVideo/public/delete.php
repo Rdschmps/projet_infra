@@ -9,7 +9,9 @@ if (isset($_GET['id'])) {
     $stmt->bindParam(':id', $id);
 
     if ($stmt->execute()) {
-        echo "Jeu vidéo supprimé avec succès.";
+        // Redirection vers index.php
+        header("Location: index.php");
+        exit(); // Assurez-vous de quitter le script après la redirection
     } else {
         echo "Erreur lors de la suppression du jeu vidéo.";
     }

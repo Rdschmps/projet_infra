@@ -37,8 +37,8 @@ include '../includes/header.html';
                     <td><img src="<?php echo htmlspecialchars($jeu['image']); ?>" alt="Image" width="100"></td>
                     <td><?php echo htmlspecialchars($jeu['date_evaluation']); ?></td>
                     <td>
-                        <a href="update.php?id=<?php echo $jeu['id']; ?>">Modifier</a>
-                        <a href="delete.php?id=<?php echo $jeu['id']; ?>">Supprimer</a>
+                        <a href="update.php?id=<?php echo $jeu['id']; ?>" class="btn btn-success">Modifier</a>
+                        <a href="delete.php?id=<?php echo $jeu['id']; ?>" class="btn btn-secondary">Supprimer</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
