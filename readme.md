@@ -2,6 +2,8 @@
 
 ## Présentation
 Ce projet est une application de gestion de jeux vidéos qui permet d'ajouter, de supprimer, de mettre à jour et de visualiser (crud) des informations sur différents jeux vidéos sur l'application coté client, stocké dans une base de donnée sur un pc serveur.
+
+
 ![back-><-front](https://github.com/Rdschmps/projet_infra/blob/main/docs/serveur.png)
 
 
@@ -32,6 +34,7 @@ Pour le seveur nous utilisons Xampp ou Wamp avec PhpMyAdmin pour gérer la base 
 3. Créer un nouvel utilisateur dans la base de donnée.
 4. . Exécutez `composer install` à la racine du projet pour installer les dépendances.
 5. Renommez le fichier `.env.example` en `.env` dans le dossier config et configurez les variables d'environnement selon vos besoins.
+6. Enfin vous pouvez accéder à l'application avec l'url : http://localhost/chemin/vers/le/repo/GestionsJeuxVideo/public/index.php
 
 ## Page de jeu
 ![Page de jeu](https://github.com/Rdschmps/projet_infra/blob/main/docs/Accueil_site.png)
