@@ -2,7 +2,7 @@
 
 ## Présentation
 Ce projet est une application de gestion de jeux vidéos qui permet d'ajouter, de supprimer, de mettre à jour et de visualiser (crud) des informations sur différents jeux vidéos sur l'application coté client, stocké dans une base de donnée sur un pc serveur.
-![Page de jeu]()
+![back-><-front](https://github.com/Rdschmps/projet_infra/blob/main/docs/serveur.png)
 
 
 ## Cadre
