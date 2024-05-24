@@ -1,20 +1,28 @@
 # Document d'architecture
 
-### Infrastructure mise en place
-nerhbvhjrebvkbervjkber
-veruvr
-gr
-vrvr
+## Infrastructure
+L'infrastructure mise en place pour ce projet repose sur une architecture classique client-serveur. Le pc client utilise l'application web tandis que le pc serveur heberge la base de données stocke les données nécessaires au fonctionnement de l'application.
 
 
 
-# Sécurité
+![Structure PhpMyAdmin](https://github.com/Rdschmps/projet_infra/blob/main/docs/client-serveur.png)
+
+## Communication avec la Base de Données
+
+L'application communique avec la base de données à l'aide de requêtes SQL. Pour assurer la sécurité et éviter les injections SQL, nous utilisons des requêtes préparées avec PDO (PHP Data Objects). Cela permet de séparer les données des instructions SQL et de réduire les risques d'attaques.
+
+## Ports Alloués et Sécurité
+
+Les ports utilisés dépendent de l'environnement d'exécution de l'application. Ici pour le communication avec la base de données nous utilisons le port par défaut de MySql : 3306
+
+
+## Sécurité
 - Création d'un utilisateur pour la base de donnée avec un mot de passe sécurisé.
 - Utilisation du fichier '.env' afin de ne pas partager ses login sur git 
 
-# Prévention des Injections SQL
+### Prévention des Injections SQL
 
-## Introduction
+#### Introduction
 
 Les injections SQL sont l'une des vulnérabilités les plus courantes et les plus dangereuses pour les applications web. Elles surviennent lorsqu'un attaquant insère du code SQL malveillant dans des champs de saisie d'une application, exploitant ainsi les failles de sécurité pour accéder, modifier ou supprimer des données dans la base de données.
 

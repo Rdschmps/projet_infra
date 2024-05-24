@@ -7,9 +7,11 @@ Ce projet est une application de gestion de jeux vidéos qui permet d'ajouter, d
 ![back-><-front](https://github.com/Rdschmps/projet_infra/blob/main/docs/serveur.png)
 
 
-## Cadre
+## Cadre de développement du projet
 
 Ce projet fait partie du cours d'Infrastructure de B1 informatique à l'école Rennes Ynov Campus. 
+Ce projet était par groupe de 2 à réalisé dans le module de cours "Infra et SI" d'une durée de 28 H.
+Ce projet était notre première approche détaillé du fonctionnement et de l'utilisation d'un base de donnée.
 
 ## Stack Technique
 Il s'agit d'une application développée en PHP avec une base de données MySQL, utilisant également Composer pour la gestion des dépendances et Dotenv pour la gestion des variables d'environnement.
