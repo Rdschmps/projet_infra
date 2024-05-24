@@ -1,7 +1,9 @@
 # Gestion de Jeux Vidéos
 
 ## Présentation
-Ce projet est une application de gestion de jeux vidéos qui permet d'ajouter, de supprimer, de mettre à jour et de visualiser des informations sur différents jeux vidéos.
+Ce projet est une application de gestion de jeux vidéos qui permet d'ajouter, de supprimer, de mettre à jour et de visualiser (crud) des informations sur différents jeux vidéos sur l'application coté client, stocké dans une base de donnée sur un pc serveur.
+![Page de jeu]()
+
 
 ## Cadre
 
