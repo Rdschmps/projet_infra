@@ -1,5 +1,9 @@
 # Gestion de Jeux Vidéos
 
+### lien vers la documentation technique / architecture
+
+https://github.com/Rdschmps/projet_infra/blob/main/architecture.md
+
 ## Présentation
 Ce projet est une application de gestion de jeux vidéos qui permet d'ajouter, de supprimer, de mettre à jour et de visualiser (crud) des informations sur différents jeux vidéos sur l'application coté client, stocké dans une base de donnée sur un pc serveur.
 
@@ -43,6 +47,8 @@ Pour le seveur nous utilisons Xampp ou Wamp avec PhpMyAdmin pour gérer la base 
 
 ## Structure dans PhpMyAdmin
 ![Structure PhpMyAdmin](https://github.com/Rdschmps/projet_infra/blob/main/docs/bdd.png)
+
+
 
 
 

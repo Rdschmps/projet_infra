@@ -83,7 +83,7 @@ Des mesures de sécurité sont mises en place pour protéger l'application et la
 
 ### Prévention des Injections SQL
 
-#### Introduction
+#### Introduction injections sql
 
 Les injections SQL sont l'une des vulnérabilités les plus courantes et les plus dangereuses pour les applications web. Elles surviennent lorsqu'un attaquant insère du code SQL malveillant dans des champs de saisie d'une application, exploitant ainsi les failles de sécurité pour accéder, modifier ou supprimer des données dans la base de données.
 
