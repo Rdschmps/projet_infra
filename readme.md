@@ -31,8 +31,10 @@ Pour le seveur nous utilisons Xampp ou Wamp avec PhpMyAdmin pour gérer la base 
 4. . Exécutez `composer install` à la racine du projet pour installer les dépendances.
 5. Renommez le fichier `.env.example` en `.env` dans le dossier config et configurez les variables d'environnement selon vos besoins.
 
+## Page de jeu
 ![Page de jeu](https://github.com/Rdschmps/projet_infra/blob/main/docs/Accueil_site.png)
 
+## Structure dans PhpMyAdmin
 ![Structure PhpMyAdmin](https://github.com/Rdschmps/projet_infra/blob/main/docs/bdd.png)
 
 
